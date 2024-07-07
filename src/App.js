@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import MyNavbar from './components/Navbar';
+import PostContent from './components/PostContent';
+import SideWidgets from './components/SideWidgets';
+import Footer from './components/Footer';
+import { Container, Row } from 'react-bootstrap';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <MyNavbar />
+      <Container className="mt-5">
+        <Row>
+          <PostContent />
+          <SideWidgets />
+        </Row>
+      </Container>
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
